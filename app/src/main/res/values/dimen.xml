@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="createAcDistanceBetweenTwo" > 10dp </dimen>
+    <dimen name="contactNumberTextSize" > 17sp </dimen>
+
+</resources>

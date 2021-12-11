@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/white"
+    app:titleTextColor="@android:color/holo_red_dark"
+    android:elevation="5dp"
+    android:gravity="center"
+    app:theme="@style/ToolbarStyle"
+    app:contentInsetLeft="0dp"
+    app:contentInsetStart="0dp"
+    app:contentInsetStartWithNavigation="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    
+        <TextView
+            android:id="@+id/ToolbarTvTitleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="19sp"
+            android:layout_marginStart="10dp"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/holo_red_dark"/>
+
+        <Button
+            android:id="@+id/toolbarLogOutBtnLogOut"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:text="logout"
+            android:textColor="@android:color/holo_red_dark"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/btn_red_corner"
+            android:layout_marginEnd="10dp"/>
+
+    </RelativeLayout>
+    
+
+</android.support.v7.widget.Toolbar>

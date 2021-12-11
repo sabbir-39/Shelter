@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_red_light"
+    tools:context="com.zeroonelab.www.shelter.Login">
+
+    <include
+        android:id="@+id/LoginToolbar"
+        layout="@layout/custom_toolbar"/>
+
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LoginToolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/LogInEmail"
+            android:layout_width="280dp"
+            android:layout_height="45dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="67dp"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:hint="E-Mail"
+            android:inputType="textEmailAddress"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textColorHint="#aed6ed"
+            android:textSize="17sp" />
+
+        <EditText
+            android:id="@+id/LogInPassword"
+            android:layout_width="280dp"
+            android:layout_height="45dp"
+            android:layout_alignStart="@+id/LogInEmail"
+            android:layout_below="@+id/LogInEmail"
+            android:layout_marginTop="11dp"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:textColor="@android:color/holo_blue_dark"
+            android:textColorHint="#aed6ed"
+            android:textSize="17sp" />
+
+        <ImageButton
+            android:id="@+id/LogInImgBtnTogglePassword"
+            android:layout_width="40dp"
+            android:layout_height="45dp"
+            android:layout_alignEnd="@+id/LogInPassword"
+            android:layout_alignTop="@+id/LogInPassword"
+            android:background="@android:color/transparent" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/LogInButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btn_white_corner"
+        android:onClick="SignIn"
+        android:text="Sign In"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/btnSignUp"
+        android:layout_width="210dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="39dp"
+        android:background="@drawable/btn_white_corner"
+        android:text="@string/sign_up"
+        android:textColor="@android:color/white" />
+
+</RelativeLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zeroonelab.www.shelter.InfoActivity">
+
+    <include
+        android:id="@+id/InfoActivityToolbar"
+        layout="@layout/custom_toolbar_logout"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_red_light"
+        android:layout_below="@+id/InfoActivityToolbar"
+        android:padding="30dp"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/InfoActivityContact"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/contact_number_icon"/>
+
+        <ImageButton
+            android:id="@+id/InfoActivityLocation"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/location_icon"/>
+
+        <ImageButton
+            android:id="@+id/InfoActivityPoliceStation"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/InfoActivityContact"
+            android:background="@drawable/police_icon"
+            android:layout_marginTop="10dp"/>
+
+        <ImageButton
+            android:id="@+id/InfoActivityRAB"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/InfoActivityLocation"
+            android:background="@drawable/rab_icon"
+            android:layout_marginTop="10dp"/>
+
+        <ImageButton
+            android:id="@+id/InfoActivityHospitals"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_below="@+id/InfoActivityPoliceStation"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/hospital_icon"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

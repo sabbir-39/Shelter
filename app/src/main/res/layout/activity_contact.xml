@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zeroonelab.www.shelter.ContactActivity">
+
+    <include
+        android:id="@+id/ContactActivityToolbar"
+        layout="@layout/custom_toolbar_logout"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/holo_red_light"
+        android:layout_below="@+id/ContactActivityToolbar"
+        android:padding="30dp"
+        android:gravity="center">
+
+        <LinearLayout
+            android:id="@+id/LinearLayContactActivityTvContactNumber1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/ContactActivityTvContactNumber1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textColor="@android:color/black"
+                android:background="@android:color/white"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:textSize="@dimen/contactNumberTextSize"/>
+            <ImageButton
+                android:id="@+id/ContactActivityImgBtnContactNumber1"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_add_circle_outline"
+                android:background="@android:color/transparent"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayContactActivityTvContactNumber3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/LinearLayContactActivityTvContactNumber2"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:id="@+id/ContactActivityTvContactNumber3"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textColor="@android:color/black"
+                android:background="@android:color/white"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:textSize="@dimen/contactNumberTextSize"/>
+            <ImageButton
+                android:id="@+id/ContactActivityImgBtnContactNumber3"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_add_circle_outline"
+                android:background="@android:color/transparent"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayContactActivityTvContactNumber4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/LinearLayContactActivityTvContactNumber3"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:id="@+id/ContactActivityTvContactNumber4"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textColor="@android:color/black"
+                android:background="@android:color/white"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:textSize="@dimen/contactNumberTextSize"/>
+            <ImageButton
+                android:id="@+id/ContactActivityImgBtnContactNumber4"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_add_circle_outline"
+                android:background="@android:color/transparent"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayContactActivityTvContactNumber5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/LinearLayContactActivityTvContactNumber4"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:id="@+id/ContactActivityTvContactNumber5"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textColor="@android:color/black"
+                android:background="@android:color/white"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:textSize="@dimen/contactNumberTextSize"/>
+            <ImageButton
+                android:id="@+id/ContactActivityImgBtnContactNumber5"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_add_circle_outline"
+                android:background="@android:color/transparent"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/LinearLayContactActivityTvContactNumber2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_below="@+id/LinearLayContactActivityTvContactNumber1"
+            android:layout_marginTop="10dp">
+            <TextView
+                android:id="@+id/ContactActivityTvContactNumber2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textColor="@android:color/black"
+                android:background="@android:color/white"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="5"
+                android:gravity="center"
+                android:textSize="@dimen/contactNumberTextSize"/>
+            <ImageButton
+                android:id="@+id/ContactActivityImgBtnContactNumber2"
+                android:layout_width="40dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:src="@drawable/ic_add_circle_outline"
+                android:background="@android:color/transparent"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/ContactActivityBtnSave"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/LinearLayContactActivityTvContactNumber5"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="23dp"
+            android:background="@drawable/btn_white_corner"
+            android:text="SAVE"
+            android:textColor="@android:color/white" />
+
+    </RelativeLayout>
+</RelativeLayout>
