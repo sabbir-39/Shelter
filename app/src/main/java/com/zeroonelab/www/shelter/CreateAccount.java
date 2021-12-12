@@ -165,9 +165,7 @@ public class CreateAccount extends AppCompatActivity {
 
         if(getSupportActionBar() != null)
         {
-            getSupportActionBar().setTitle( "SIGN UP" );
-            getSupportActionBar().setDisplayHomeAsUpEnabled( true );
-            getSupportActionBar().setDisplayShowHomeEnabled( true );
+            getSupportActionBar().setTitle( "Create Account" );
         }
     }
 

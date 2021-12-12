@@ -8,7 +8,7 @@
 
     <include
         android:id="@+id/UserMainActivityToolbar"
-        layout="@layout/custom_toolbar_logout"/>
+        layout="@layout/custom_toolbar_logout" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -62,8 +62,9 @@
             android:layout_width="180dp"
             android:layout_height="40dp"
             android:background="@drawable/btn_white_corner"
-            android:text="help"
-            android:onClick="CallAndMessage"/>
+            android:onClick="CallAndMessage"
+            android:visibility="gone"
+            android:text="help" />
 
     </RelativeLayout>
 

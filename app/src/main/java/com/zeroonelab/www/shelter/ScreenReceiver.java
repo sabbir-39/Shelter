@@ -6,9 +6,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.media.MediaPlayer;
 import android.net.Uri;
-import android.provider.Settings;
 import android.telephony.SmsManager;
-import android.util.Log;
 
 import androidx.core.app.ActivityCompat;
 
@@ -24,16 +22,11 @@ public class ScreenReceiver extends BroadcastReceiver {
 
         if (intent.getAction().equals(Intent.ACTION_SCREEN_OFF)) {
 
-
             player.start();
-
             wasScreenOn = false;
-
             SmsManager sms = SmsManager.getDefault();
-
             String message = "Please, help me.";
-
-            String number = "01521433784" ;
+            String number = "01781920068" ;
 
             //for(String number : numbers) {
             sms.sendTextMessage( number , null, message, null, null);
@@ -54,8 +47,7 @@ public class ScreenReceiver extends BroadcastReceiver {
             SmsManager sms = SmsManager.getDefault();
 
             String message = "Please, Help me.";
-
-            String number = "01521433784" ;
+            String number = "01781920068" ;
 
             //for(String number : numbers) {
             sms.sendTextMessage( number , null, message, null, null);

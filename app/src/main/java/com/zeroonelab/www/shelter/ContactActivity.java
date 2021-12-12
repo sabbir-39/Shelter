@@ -8,6 +8,7 @@ import android.provider.ContactsContract;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -29,13 +30,11 @@ import org.w3c.dom.Text;
 
 public class ContactActivity extends AppCompatActivity {
 
-    Button btnSave ;
+    Button btnSave;
 
-    DatabaseReference dbRootRef , dbUsersPersonalInfoRef ;
-
-    FirebaseAuth auth ;
-
-    ImageButton imgBtn1,imgBtn2,imgBtn3,imgBtn4,imgBtn5 ;
+    DatabaseReference dbRootRef , dbUsersPersonalInfoRef;
+    FirebaseAuth auth;
+    ImageButton imgBtn1,imgBtn2,imgBtn3,imgBtn4,imgBtn5;
 
     String strUserID ;
     String strContactNumber, strName ;
@@ -46,8 +45,8 @@ public class ContactActivity extends AppCompatActivity {
     String strContactNumber5, strName5 ;
 
     Toolbar toolbar ;
-    TextView tvContactNumber ;
-    TextView tvContactNumber1,tvContactNumber2,tvContactNumber3,tvContactNumber4,tvContactNumber5 ;
+    EditText tvContactNumber ;
+    EditText tvContactNumber1,tvContactNumber2,tvContactNumber3,tvContactNumber4,tvContactNumber5 ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -188,6 +187,11 @@ public class ContactActivity extends AppCompatActivity {
         btnSave.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                strContactNumber1 = tvContactNumber1.getText().toString();
+                strContactNumber2 = tvContactNumber2.getText().toString();
+                strContactNumber3 = tvContactNumber3.getText().toString();
+                strContactNumber4 = tvContactNumber4.getText().toString();
+                strContactNumber5 = tvContactNumber5.getText().toString();
 
                 WomenAndChildrensPersonalInfo.ContactNumber contactNumber =
                         new WomenAndChildrensPersonalInfo.ContactNumber( strContactNumber1,
@@ -216,7 +220,7 @@ public class ContactActivity extends AppCompatActivity {
         } );
     }
 
-    private void imgBtnClickListener(ImageButton imageButton, final TextView textView, final int PICK_NUMBER ) {
+    private void imgBtnClickListener(ImageButton imageButton, final EditText textView, final int PICK_NUMBER ) {
 
         imageButton.setOnClickListener( new View.OnClickListener() {
             @Override

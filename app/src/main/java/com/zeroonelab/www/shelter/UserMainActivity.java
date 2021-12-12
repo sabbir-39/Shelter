@@ -6,6 +6,8 @@ import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.telephony.SmsManager;
+import android.util.Log;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -68,7 +70,7 @@ public class UserMainActivity extends AppCompatActivity {
                         @Override
                         public void onDataChange(DataSnapshot dataSnapshot) {
 
-                            personalInfo = dataSnapshot.getValue( WomenAndChildrensPersonalInfo.class ) ;
+                            personalInfo = dataSnapshot.getValue(WomenAndChildrensPersonalInfo.class ) ;
 
                         }
 
@@ -86,9 +88,8 @@ public class UserMainActivity extends AppCompatActivity {
         dbContactNumberListRef.addListenerForSingleValueEvent( new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
-
-                Toast.makeText( UserMainActivity.this, "Contact Number Found", Toast.LENGTH_SHORT ).show();
-
+                Log.d("UserMainActivity.this", "Contact");
+                // Toast.makeText( UserMainActivity.this, "Contact Number Found", Toast.LENGTH_SHORT ).show();
             }
 
             @Override
@@ -124,7 +125,7 @@ public class UserMainActivity extends AppCompatActivity {
             public void onCancelled(DatabaseError databaseError) {
 
             }
-        } ) ;
+        }) ;
     }
 
     private void fireBaseInitialization() {
@@ -132,7 +133,7 @@ public class UserMainActivity extends AppCompatActivity {
         auth = FirebaseAuth.getInstance() ;
         dbRootRef = FirebaseDatabase.getInstance().getReference() ;
         dbUsersPersonalInfoRef = dbRootRef.child( "usersPersonalInfo" ).child( "womenAndChild" ) ;
-        dbContactNumberListRef = dbRootRef.child( "contactNumber" ) ;
+        dbContactNumberListRef = dbRootRef.child("womenAndChild").child(auth.getCurrentUser().getUid().toString()).child( "contactNumber" ) ;
     }
 
     private void uiObjectsClickListener() {
@@ -150,7 +151,7 @@ public class UserMainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String number = "01964879417" ;
+                String number = "01781920068" ;
                 SmsManager sms = SmsManager.getDefault();
 
                 String message = "হেল্প ! HELP! হেল্প ! \n" +
@@ -158,7 +159,6 @@ public class UserMainActivity extends AppCompatActivity {
                         +", এখন আমি "  + " " + "এ আছি। দয়া করে,আমাকে সাহায্য করুন।" ;
 
                 sms.sendTextMessage( number , null, message, null, null);
-
 
                 Intent intent = new Intent( getApplicationContext() , CurrentLocation.class) ;
                 intent.putExtra( "FROM","HELP" ) ;
@@ -204,7 +204,7 @@ public class UserMainActivity extends AppCompatActivity {
 
         String message = "Please, Help me.";
 
-        String number = "01521433784" ;
+        String number = "01781920068" ;
 
         //for(String number : numbers) {
         sms.sendTextMessage( number , null, message, null, null);
@@ -236,8 +236,28 @@ public class UserMainActivity extends AppCompatActivity {
                 "আমি "
                 +", এখন আমি "  + " " + "এ আছি। দয়া করে,আমাকে সাহায্য করুন।" ;
 
-        String strNumber = "01521433784" ;
+        String strNumber = "01781920068" ;
         sms.sendTextMessage(  strNumber , null, message, null, null );
+    }
 
+    @Override
+    public boolean onKeyLongPress(int keyCode, KeyEvent event) {
+
+        if (keyCode == KeyEvent.KEYCODE_VOLUME_UP)
+        {
+            String number = "01781920068" ;
+            SmsManager sms = SmsManager.getDefault();
+
+            String message = "হেল্প ! HELP! হেল্প ! \n" +
+                    "আমি "+"  "
+                    +", এখন আমি "  + " " + "এ আছি। দয়া করে,আমাকে সাহায্য করুন।" ;
+
+            sms.sendTextMessage( number , null, message, null, null);
+
+            Intent intent = new Intent( getApplicationContext() , CurrentLocation.class) ;
+            intent.putExtra( "FROM","HELP" ) ;
+            startActivity( intent );
+        }
+        return true;
     }
 }

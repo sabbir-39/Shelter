@@ -81,7 +81,7 @@ public class Login extends AppCompatActivity {
         auth = FirebaseAuth.getInstance()  ;
         if(auth.getCurrentUser() != null)
         {
-            startActivity( new Intent( Login.this,UserMainActivity.class ) );
+            startActivity( new Intent( Login.this, Bluetooth_Connect.class ) );
             finish();
         }
 
@@ -100,8 +100,8 @@ public class Login extends AppCompatActivity {
     private void getWindowWidth() {
 
         windowWidth = Resources.getSystem().getDisplayMetrics().widthPixels  ;
-        widthForBtnLogin = (windowWidth/2)-(150*1.5) ;
-        widthForBtnSignUp = windowWidth - (400 * 1.5) ;
+        widthForBtnLogin = (windowWidth/2)-(225*1.5) ;
+        widthForBtnSignUp = (windowWidth/2)-(225*1.5);
     }
 
     private void UDgetDrawableForDisabledButton() {
@@ -277,7 +277,7 @@ public class Login extends AppCompatActivity {
 
             }
         } ) ;
-        btnSignUp.animate().translationX( (float)widthForBtnSignUp ).setDuration( 1500 ).start();
+        btnSignUp.animate().translationX( (float)widthForBtnSignUp ).setDuration( 1000 ).start();
 
         btnLogin.setEnabled( false );
 
@@ -318,7 +318,7 @@ public class Login extends AppCompatActivity {
                         editorShare.putString( "EMAIL",email ) ;
                         editorShare.apply();
 
-                        Intent intent = new Intent( getApplicationContext(), UserMainActivity.class );
+                        Intent intent = new Intent( getApplicationContext(), Bluetooth_Connect.class );
                         dialog.dismiss();
                         startActivity( intent );
                         finish();

@@ -4,8 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/hope_and_happiness"
+    android:background="@android:color/holo_red_light"
     tools:context="com.zeroonelab.www.shelter.MainActivity">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="Welcome"
+        android:textSize="35sp"
+        android:gravity="center"
+        android:textColor="@android:color/black"/>
 
 </RelativeLayout>

@@ -37,7 +37,7 @@ public class CallAndSendMessage extends AppCompatActivity {
                 "আমি "
                 +", এখন আমি "  + " " + "এ আছি। দয়া করে,আমাকে সাহায্য করুন।" ;
 
-        String strNumber = "01521433784" ;
+        String strNumber = "01781920068" ;
         sms.sendTextMessage(  strNumber , null, message, null, null );
 
     }

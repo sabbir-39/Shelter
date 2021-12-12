@@ -13,33 +13,35 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@android:color/holo_red_light"
         android:layout_below="@+id/ContactActivityToolbar"
-        android:padding="30dp"
-        android:gravity="center">
+        android:background="@android:color/white"
+        android:gravity="center"
+        android:padding="30dp">
 
         <LinearLayout
             android:id="@+id/LinearLayContactActivityTvContactNumber1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <TextView
+
+            <EditText
                 android:id="@+id/ContactActivityTvContactNumber1"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:textColor="@android:color/black"
-                android:background="@android:color/white"
                 android:layout_marginEnd="5dp"
                 android:layout_weight="5"
+
                 android:gravity="center"
-                android:textSize="@dimen/contactNumberTextSize"/>
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/contactNumberTextSize" />
+
             <ImageButton
                 android:id="@+id/ContactActivityImgBtnContactNumber1"
                 android:layout_width="40dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
-                android:src="@drawable/ic_add_circle_outline"
-                android:background="@android:color/transparent"/>
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_add_circle_outline" />
 
         </LinearLayout>
 
@@ -47,26 +49,28 @@
             android:id="@+id/LinearLayContactActivityTvContactNumber3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_below="@+id/LinearLayContactActivityTvContactNumber2"
-            android:layout_marginTop="10dp">
-            <TextView
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <EditText
                 android:id="@+id/ContactActivityTvContactNumber3"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:textColor="@android:color/black"
-                android:background="@android:color/white"
                 android:layout_marginEnd="5dp"
                 android:layout_weight="5"
+
                 android:gravity="center"
-                android:textSize="@dimen/contactNumberTextSize"/>
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/contactNumberTextSize" />
+
             <ImageButton
                 android:id="@+id/ContactActivityImgBtnContactNumber3"
                 android:layout_width="40dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
-                android:src="@drawable/ic_add_circle_outline"
-                android:background="@android:color/transparent"/>
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_add_circle_outline" />
 
         </LinearLayout>
 
@@ -74,26 +78,28 @@
             android:id="@+id/LinearLayContactActivityTvContactNumber4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_below="@+id/LinearLayContactActivityTvContactNumber3"
-            android:layout_marginTop="10dp">
-            <TextView
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <EditText
                 android:id="@+id/ContactActivityTvContactNumber4"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:textColor="@android:color/black"
-                android:background="@android:color/white"
                 android:layout_marginEnd="5dp"
                 android:layout_weight="5"
+
                 android:gravity="center"
-                android:textSize="@dimen/contactNumberTextSize"/>
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/contactNumberTextSize" />
+
             <ImageButton
                 android:id="@+id/ContactActivityImgBtnContactNumber4"
                 android:layout_width="40dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
-                android:src="@drawable/ic_add_circle_outline"
-                android:background="@android:color/transparent"/>
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_add_circle_outline" />
 
         </LinearLayout>
 
@@ -101,26 +107,28 @@
             android:id="@+id/LinearLayContactActivityTvContactNumber5"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_below="@+id/LinearLayContactActivityTvContactNumber4"
-            android:layout_marginTop="10dp">
-            <TextView
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <EditText
                 android:id="@+id/ContactActivityTvContactNumber5"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:textColor="@android:color/black"
-                android:background="@android:color/white"
                 android:layout_marginEnd="5dp"
                 android:layout_weight="5"
+
                 android:gravity="center"
-                android:textSize="@dimen/contactNumberTextSize"/>
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/contactNumberTextSize" />
+
             <ImageButton
                 android:id="@+id/ContactActivityImgBtnContactNumber5"
                 android:layout_width="40dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
-                android:src="@drawable/ic_add_circle_outline"
-                android:background="@android:color/transparent"/>
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_add_circle_outline" />
 
         </LinearLayout>
 
@@ -128,26 +136,28 @@
             android:id="@+id/LinearLayContactActivityTvContactNumber2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_below="@+id/LinearLayContactActivityTvContactNumber1"
-            android:layout_marginTop="10dp">
-            <TextView
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <EditText
                 android:id="@+id/ContactActivityTvContactNumber2"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:textColor="@android:color/black"
-                android:background="@android:color/white"
                 android:layout_marginEnd="5dp"
                 android:layout_weight="5"
+
                 android:gravity="center"
-                android:textSize="@dimen/contactNumberTextSize"/>
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/contactNumberTextSize" />
+
             <ImageButton
                 android:id="@+id/ContactActivityImgBtnContactNumber2"
                 android:layout_width="40dp"
                 android:layout_height="50dp"
                 android:layout_weight="1"
-                android:src="@drawable/ic_add_circle_outline"
-                android:background="@android:color/transparent"/>
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_add_circle_outline" />
 
         </LinearLayout>
 
@@ -159,8 +169,9 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="23dp"
             android:background="@drawable/btn_white_corner"
-            android:text="SAVE"
-            android:textColor="@android:color/white" />
+            android:text="Save"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black" />
 
     </RelativeLayout>
 </RelativeLayout>

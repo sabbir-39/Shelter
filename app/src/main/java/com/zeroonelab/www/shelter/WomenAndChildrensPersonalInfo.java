@@ -6,12 +6,12 @@ package com.zeroonelab.www.shelter;
 
 public class WomenAndChildrensPersonalInfo {
 
-    String name ;
-    String mobileNumber ;
-    String email ;
-    String password ;
-    String userID ;
-    ContactNumber contactNumber  ;
+    public String name ;
+    public String mobileNumber ;
+    public String email ;
+    public String password ;
+    public String userID ;
+    public ContactNumber contactNumber  ;
 
     public WomenAndChildrensPersonalInfo() {
     }
@@ -75,11 +75,11 @@ public class WomenAndChildrensPersonalInfo {
 
     public static class ContactNumber
     {
-        String contactNumber1;
-        String contactNumber2;
-        String contactNumber3;
-        String contactNumber4;
-        String contactNumber5;
+        public String contactNumber1;
+        public String contactNumber2;
+        public String contactNumber3;
+        public String contactNumber4;
+        public String contactNumber5;
 
         public ContactNumber() {
         }
